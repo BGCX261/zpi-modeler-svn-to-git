@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="Modeler.Panels.LightsPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Modeler.Panels"
+             mc:Ignorable="d" 
+             d:DesignHeight="748" d:DesignWidth="270">
+    <Grid Height="722">
+        <Image Name="lightPreview" MouseMove="lightPreview_MouseMove" Stretch="Fill" Margin="25,12,25,0"
+               Source="/Modeler;component/Ikony/Placeholder.png" Height="200" VerticalAlignment="Top" />
+        <ComboBox Height="23" Margin="25,219,25,0" Name="lightType_combo" VerticalAlignment="Top" SelectedIndex="0" SelectionChanged="lightType_combo_SelectionChanged">
+            <ComboBoxItem Name="Point">Punktowe</ComboBoxItem>
+            <ComboBoxItem Name="Spot">Stożkowe</ComboBoxItem>
+            <ComboBoxItem Name="Goniometric">Goniometryczne</ComboBoxItem>
+        </ComboBox>
+        <local:GoniometricCanvas x:Name="goniometry" Height="81" Margin="11,479,13,0" VerticalAlignment="Top" Visibility="Hidden">            
+        </local:GoniometricCanvas>
+        <Label Content="R:" Height="28" HorizontalAlignment="Left" Margin="11,282,0,0" Name="label1" VerticalAlignment="Top" Width="21" />
+        <Label Content="G:" Height="28" HorizontalAlignment="Left" Margin="11,316,0,0" Name="label2" VerticalAlignment="Top" Width="21" />
+        <Label Content="B:" Height="28" HorizontalAlignment="Left" Margin="11,350,0,0" Name="label3" VerticalAlignment="Top" Width="21" />
+        <Slider Height="23" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Margin="38,287,0,0" Maximum="1" Minimum="0" Name="colorRed_slider" TickFrequency="0.0001" VerticalAlignment="Top" Width="150" 
+                ValueChanged="clolorRed_slider_ValueChanged" />
+        <Slider Height="23" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Margin="38,321,0,0" Maximum="1" Minimum="0" Name="colorGreen_slider" TickFrequency="0.0001" VerticalAlignment="Top" Width="150" 
+                ValueChanged="colorGreen_slider_ValueChanged" />
+        <Slider Height="23" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Margin="38,355,0,0" Maximum="1" Minimum="0" Name="colorBlue_slider" TickFrequency="0.0001" VerticalAlignment="Top" Width="150" 
+                ValueChanged="colorBlue_slider_ValueChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="194,287,0,0" Name="colorRed_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" 
+                 TextChanged="colorRed_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="194,321,0,0" Name="colorGreen_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" 
+                 TextChanged="colorGreen_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="194,355,0,0" Name="colorBlue_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" 
+                 TextChanged="colorBlue_box_TextChanged" />
+        <Label Content="Kolor:" Height="28" HorizontalAlignment="Left" Margin="12,248,0,0" Name="label7" VerticalAlignment="Top" Width="81" />
+        <Label Content="f:" Height="28" HorizontalAlignment="Left" Margin="11,428,0,0" Name="label4" VerticalAlignment="Top" Width="21" />
+        <Slider Height="23" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Margin="38,433,0,0" Maximum="500" Minimum="0" Name="flux_slider" TickFrequency="1" 
+                VerticalAlignment="Top" Width="150" ValueChanged="flux_slider_ValueChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="194,433,0,0" Name="flux_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="flux_box_TextChanged" />
+        <Label Content="Strumien świetlny:" Height="28" HorizontalAlignment="Left" Margin="12,394,0,0" Name="label5" VerticalAlignment="Top" Width="130" />
+        <Slider Height="23" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Margin="37,512,0,0" Maximum="180" Minimum="0" Name="innerAngle_slider" 
+                TickFrequency="1" VerticalAlignment="Top" Width="150" ValueChanged="innerAngle_slider_ValueChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="193,512,0,0" Name="innerAngle_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="innerAngle_box_TextChanged" />
+        <Label Name="innerAngle_label" Content="Kąt wewnętrzny:" Height="28" HorizontalAlignment="Left" Margin="11,473,0,0" VerticalAlignment="Top" Width="130" />
+        <Slider Height="23" HorizontalAlignment="Left" IsSnapToTickEnabled="True" Margin="37,585,0,0" Maximum="180" Minimum="0" Name="outerAngle_slider" 
+                TickFrequency="1" VerticalAlignment="Top" Width="150" ValueChanged="outerAngle_slider_ValueChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="193,585,0,0" Name="outerAngle_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="outerAngle_box_TextChanged" />
+        <Label Content="Kąt zewnętrzny:" Height="28" HorizontalAlignment="Left" Margin="11,546,0,0" Name="outerAngle_label" VerticalAlignment="Top" Width="130" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="Modeler.Panels.AtributesPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="917" d:DesignWidth="270">
+    <Grid>
+        <Image Height="200" Margin="25,12,25,0" Name="materialPreview" Stretch="Fill" VerticalAlignment="Top" 
+               Source="/Modeler;component/Ikony/Placeholder.png" MouseMove="materialPreview_MouseMove" AllowDrop="True" Drop="materialPreview_Drop" />
+        <Label Content="R:" Height="28" Margin="12,268,0,0" Name="label1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="21" />
+        <Label Content="G:" Height="28" HorizontalAlignment="Left" Margin="12,302,0,0" Name="label2" VerticalAlignment="Top" Width="21" />
+        <Label Content="B:" Height="28" HorizontalAlignment="Left" Margin="12,336,0,0" Name="label3" VerticalAlignment="Top" Width="21" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,273,0,0" Name="colorRed_slider" VerticalAlignment="Top" Width="150" 
+                Minimum="0" Maximum="255" ValueChanged="clolorRed_slider_ValueChanged" TickFrequency="1" IsSnapToTickEnabled="True"/>
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,307,0,0" Name="colorGreen_slider" VerticalAlignment="Top" Width="150" 
+                Minimum="0" Maximum="255" Interval="1" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="colorGreen_slider_ValueChanged" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,341,0,0" Name="colorBlue_slider" VerticalAlignment="Top" Width="150" 
+                Minimum="0" Maximum="255" Interval="1" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="colorBlue_slider_ValueChanged" />
+        <TextBox TextAlignment="Right" Height="23" HorizontalAlignment="Left" Margin="195,273,0,0" Name="colorRed_box" VerticalAlignment="Top" Width="34" TextChanged="colorRed_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,307,0,0" Name="colorGreen_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="colorGreen_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,341,0,0" Name="colorBlue_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="colorBlue_box_TextChanged" />
+        <Label Content="R:" Height="28" HorizontalAlignment="Left" Margin="12,403,0,0" Name="label4" VerticalAlignment="Top" Width="21" />
+        <Label Content="G:" Height="28" HorizontalAlignment="Left" Margin="12,437,0,0" Name="label5" VerticalAlignment="Top" Width="21" />
+        <Label Content="B:" Height="28" HorizontalAlignment="Left" Margin="12,471,0,0" Name="label6" VerticalAlignment="Top" Width="21" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,408,0,0" Maximum="1" Minimum="0" Name="diffuseRed_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.0001" IsSnapToTickEnabled="True" ValueChanged="diffuseRed_slider_ValueChanged" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,442,0,0" Maximum="1" Minimum="0" Name="diffuseGreen_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.0001" IsSnapToTickEnabled="True" ValueChanged="diffuseGreen_slider_ValueChanged" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,476,0,0" Maximum="1" Minimum="0" Name="diffuseBlue_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.0001" IsSnapToTickEnabled="True" ValueChanged="diffuseBlue_slider_ValueChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,408,0,0" Name="diffuseRed_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="diffuseRed_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,442,0,0" Name="diffuseGreen_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="diffuseGreen_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,476,0,0" Name="diffuseBlue_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="diffuseBlue_box_TextChanged" />
+        <Label Content="Kolor:" Height="28" HorizontalAlignment="Left" Margin="13,234,0,0" Name="label7" VerticalAlignment="Top" Width="81" />
+        <Label Content="Rozproszenie:" Height="28" HorizontalAlignment="Left" Margin="13,369,0,0" Name="label8" VerticalAlignment="Top" Width="98" />
+        <Label Content="R:" Height="28" HorizontalAlignment="Left" Margin="12,539,0,0" Name="label9" VerticalAlignment="Top" Width="21" />
+        <Label Content="G:" Height="28" HorizontalAlignment="Left" Margin="12,573,0,0" Name="label10" VerticalAlignment="Top" Width="21" />
+        <Label Content="B:" Height="28" HorizontalAlignment="Left" Margin="12,607,0,0" Name="label11" VerticalAlignment="Top" Width="21" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,544,0,0" Maximum="1" Minimum="0" Name="specularRed_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.0001" IsSnapToTickEnabled="True" ValueChanged="specularRed_slider_ValueChanged" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,578,0,0" Maximum="1" Minimum="0" Name="specularGreen_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.0001" IsSnapToTickEnabled="True" ValueChanged="specularGreen_slider_ValueChanged" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,612,0,0" Maximum="1" Minimum="0" Name="specularBlue_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.0001" IsSnapToTickEnabled="True" ValueChanged="specularBlue_slider_ValueChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,544,0,0" Name="specularRed_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="specularRed_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,578,0,0" Name="specularGreen_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="specularGreen_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,612,0,0" Name="specularBlue_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="specularBlue_box_TextChanged" />
+        <Label Content="Odbicie lustrzane:" Height="28" HorizontalAlignment="Left" Margin="13,505,0,0" Name="label12" VerticalAlignment="Top" Width="126" />
+        <Label Content="R:" Height="28" HorizontalAlignment="Left" Margin="12,675,0,0" Name="label13" VerticalAlignment="Top" Width="21" />
+        <Label Content="G:" Height="28" HorizontalAlignment="Left" Margin="12,709,0,0" Name="label14" VerticalAlignment="Top" Width="21" />
+        <Label Content="B:" Height="28" HorizontalAlignment="Left" Margin="12,743,0,0" Name="label15" VerticalAlignment="Top" Width="21" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,680,0,0" Maximum="1" Minimum="0" Name="transparentRed_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.0001" IsSnapToTickEnabled="True" ValueChanged="transparentRed_slider_ValueChanged" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,714,0,0" Maximum="1" Minimum="0" Name="transparentGreen_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.0001" IsSnapToTickEnabled="True" ValueChanged="transparentGreen_slider_ValueChanged" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,748,0,0" Maximum="1" Minimum="0" Name="transparentBlue_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.0001" IsSnapToTickEnabled="True" ValueChanged="transparentBlue_slider_ValueChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,680,0,0" Name="transparentRed_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="transparentRed_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,714,0,0" Name="transparentGreen_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="transparentGreen_box_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,748,0,0" Name="transparentBlue_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="transparentBlue_box_TextChanged" />
+        <Label Content="Przeroczystość:" Height="28" HorizontalAlignment="Left" Margin="13,641,0,0" Name="label16" VerticalAlignment="Top" Width="126" />
+        <Label Content="n:" Height="28" HorizontalAlignment="Left" Margin="12,777,0,0" Name="label17" VerticalAlignment="Top" Width="21" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="39,782,0,0" Maximum="10" Minimum="0" Name="eta_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="0.05" IsSnapToTickEnabled="True" ValueChanged="eta_slider_ValueChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="195,782,0,0" Name="eta_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="eta_box_TextChanged" />
+        <Label Content="g:" Height="28" HorizontalAlignment="Left" Margin="11,845,0,0" Name="label18" VerticalAlignment="Top" Width="21" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="38,850,0,0" Maximum="1000" Minimum="0" Name="g_slider" VerticalAlignment="Top" Width="150" 
+                TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="g_slider_ValueChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="194,850,0,0" Name="g_box" TextAlignment="Right" VerticalAlignment="Top" Width="34" TextChanged="g_box_TextChanged" />
+        <Label Content="Połyskliwość:" Height="28" HorizontalAlignment="Left" Margin="12,811,0,0" Name="label19" VerticalAlignment="Top" Width="126" />
+        <Label Content="Nazwa:" Height="28" HorizontalAlignment="Left" Margin="13,211,0,0" Name="label20" VerticalAlignment="Top" Width="49" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,213,25,0" Name="name_box" TextAlignment="Left" VerticalAlignment="Top" Width="167" Text="default" HorizontalContentAlignment="Left" TextChanged="name_box_TextChanged" />
+    </Grid>
+</UserControl>
